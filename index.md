@@ -72,6 +72,7 @@ Prompt engineering is an operations discipline. You are configuring behavior, ri
 ### Real-World — Production Templates
 
 - [Support Triage](real-world/01-support-triage): Classify, escalate, and log rationales for compliance.
+- [Production Launch Checklist](real-world/02-production-readiness): Ship prompts with gates, observability, and rollback plans.
 
 ### Philosophy — Stay Responsible
 

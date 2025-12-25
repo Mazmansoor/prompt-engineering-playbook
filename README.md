@@ -10,7 +10,7 @@ The playbook treats prompts as **designed control surfaces**—not magic spells.
 - `/patterns` — reusable prompt structures (e.g., structured outputs)
 - `/advanced` — agentic, tool-using, and complex prompts
 - `/labs` — exercises and prompt debugging
-- `/real-world` — applied use cases
+- `/real-world` — applied use cases and production checklists
 - `/philosophy` — ethics, power, and responsibility
 
 ## Design Principles
@@ -79,7 +79,8 @@ Follow these steps to keep your branch in sync and land changes without surprise
 2. Apply a reusable pattern from `/patterns` to reduce variance.
 3. Stress-test it with a scenario in `/labs` and document failure modes.
 4. Add guardrails from `/advanced` (tool policies, budgets, fallbacks) before shipping.
-5. Review the ethical checklist in `/philosophy` to keep outcomes responsible.
+5. Run `/real-world/02-production-readiness` to pass launch gates and observability checks.
+6. Review the ethical checklist in `/philosophy` to keep outcomes responsible.
 
 ## Depth-First Labs (No Fluff)
 
