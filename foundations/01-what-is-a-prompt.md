@@ -1,28 +1,33 @@
-# What Is a Prompt?
+---
+layout: default
+title: What Is a Prompt?
+lede: Prompts are configuration layers that direct attention, scope, safety, and evaluation—not casual questions.
+cta_label: View Style Guide
+cta_target: /foundations/prompt-style-guide
+---
 
-A prompt is not a question.
-A prompt is not a command.
-A prompt is not text.
+## The Core Frame
 
-A prompt is a **control surface**.
+A prompt is a **control surface** that configures model behavior. It shapes:
 
-It shapes:
 - What the system attends to
-- How it reasons
-- What it excludes
-- How it evaluates success
+- How it reasons and what it ignores
+- The guardrails that constrain outputs
+- How success is measured
+
+Treat it like a product spec, not a message.
 
 ## The Core Misunderstanding
 
-Most people treat prompts as messages.
-In reality, prompts are **configurations**.
+Most teams treat prompts as clever wording. In reality, prompts are **configurations** that set:
 
-They configure:
-- Role
-- Context
-- Constraints
-- Output format
-- Evaluation criteria
+- **Role** — who the system acts as
+- **Task** — the outcome to produce
+- **Context** — the inputs that matter
+- **Constraints** — the bounds and exclusions
+- **Evaluation** — what success and failure look like
+
+Miss one, and failure is likely.
 
 ## A Minimal Prompt Skeleton
 
@@ -34,9 +39,17 @@ Every effective prompt answers five questions:
 4. What constraints apply?
 5. What does success look like?
 
-Miss one—and failure becomes likely.
+Put these upfront. Avoid burying them in background text.
 
-## Key Insight
+## Practical Guidance
 
-Prompt engineering is not about language.
-It is about **intent made explicit**.
+- **Prefer explicitness.** Name roles, formats, and limits.
+- **Separate task from context.** Do not hide instructions inside narrative prose.
+- **Model failure.** Ask for uncertainty, missing data, and next steps.
+- **Make outputs auditable.** Favor tables, schemas, and cited evidence.
+
+## Before You Move On
+
+- Draft a prompt using the five-part skeleton.
+- Identify the highest-risk failure mode (hallucination, formatting, safety) and state how it should be handled.
+- Add an evaluation line: what should the model refuse or flag as low confidence?
