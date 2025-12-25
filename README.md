@@ -42,6 +42,37 @@ Use the built-in Jekyll support to preview the premium layout locally:
 
 If Jekyll is unavailable in your environment, you can still browse the markdown directly—every page is designed to read cleanly without the theme.
 
+## Git Merge & Conflict-Resolution Guide
+
+Follow these steps to keep your branch in sync and land changes without surprises:
+
+1. **Sync main before you start.**
+   ```bash
+   git checkout main
+   git pull origin main
+   ```
+2. **Create or update your feature branch.**
+   ```bash
+   git checkout -B work
+   git rebase main
+   ```
+3. **Handle conflicts methodically.** When `git rebase` stops, run `git status` to see files in conflict, then open each file and pick the correct blocks. Use `git add <file>` after fixing each one, and continue with `git rebase --continue`. If you need to start over, `git rebase --abort` resets to the pre-rebase state.
+4. **Verify formatting and build locally.**
+   ```bash
+   bundle exec jekyll build
+   ```
+   If Jekyll is unavailable, at least run `git status` to ensure only intentional edits are staged.
+5. **Commit with a clear message.**
+   ```bash
+   git commit -am "Summarize the change"
+   ```
+6. **Push and open a PR.**
+   ```bash
+   git push origin work
+   ```
+   In GitHub, choose **Rebase and merge** (preferred for a linear history) or **Squash and merge** if the branch has many small commits.
+7. **Last-mile check after merge.** Pull `main` again locally to confirm the merged site still builds and to cut a clean starting point for the next branch.
+
 ## Quickstart
 
 1. Read `/foundations/01-what-is-a-prompt.md` to align on the five-part prompt skeleton.
