@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title | escape }} | {{ site.title | escape }}</title>
+  <meta name="description" content="Prompt Engineering Playbook — professional, premium-grade guidance for reliable AI systems.">
+  <meta property="og:title" content="{{ page.title | escape }} | {{ site.title | escape }}">
+  <meta property="og:description" content="Premium, client-ready prompt playbook with rigor, polish, and safety built-in.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <span class="brand-mark">PE</span>
+      <div class="brand-text">
+        <span class="brand-name">{{ site.title }}</span>
+        <span class="brand-tagline">Structured prompts for serious builders</span>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="{{ '/' | relative_url }}">Home</a>
+      <a href="{{ '/foundations/01-what-is-a-prompt' | relative_url }}">Foundations</a>
+      <a href="{{ '/patterns/01-structured-outputs' | relative_url }}">Patterns</a>
+      <a href="{{ '/advanced/01-tool-use' | relative_url }}">Advanced</a>
+      <a href="{{ '/labs/01-debugging-lab' | relative_url }}">Labs</a>
+      <a href="{{ '/real-world/01-support-triage' | relative_url }}">Real-World</a>
+      <a href="{{ '/philosophy/01-ethics' | relative_url }}">Philosophy</a>
+      <a href="{{ '/feedback' | relative_url }}">Feedback</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="hero">
+      <p class="eyebrow">Premium Playbook</p>
+      <h1>{{ page.hero_heading | default: page.title }}</h1>
+      <p class="lede">{{ page.lede | default: "Clear, auditable prompt systems for teams that need reliability, not folklore." }}</p>
+      {% if page.cta_label and page.cta_target %}
+      <div class="hero-actions">
+        <a class="button primary" href="{{ page.cta_target | relative_url }}">{{ page.cta_label }}</a>
+        {% if page.cta_secondary_label and page.cta_secondary_target %}
+        <a class="button ghost" href="{{ page.cta_secondary_target | relative_url }}">{{ page.cta_secondary_label }}</a>
+        {% endif %}
+      </div>
+      {% endif %}
+    </section>
+
+    <section class="content">
+      {{ content }}
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-title">{{ site.title }}</div>
+    <p>Built for practitioners who expect premium standards in reliability, safety, and clarity.</p>
+  </footer>
+</body>
+</html>
