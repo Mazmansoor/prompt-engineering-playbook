@@ -78,6 +78,11 @@ Prompt engineering is an operations discipline. You are configuring behavior, ri
 
 - [Ethics](philosophy/01-ethics): Treat prompting as a safety-critical design surface.
 
+### Feedback — Close the Loop
+
+- [Feedback & Contact](feedback): Share suggestions without leaving the premium experience. Includes a ready-to-swap form endp
+oint and routing playbook.
+
 ## How to Get the Most Value
 
 1. **Start with the mental model.** Align your team on the five-part prompt skeleton.

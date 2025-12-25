@@ -12,6 +12,7 @@ The playbook treats prompts as **designed control surfaces**—not magic spells.
 - `/labs` — exercises and prompt debugging
 - `/real-world` — applied use cases and production checklists
 - `/philosophy` — ethics, power, and responsibility
+- `/feedback.md` — contact options, form embed, and routing playbook
 
 ## Design Principles
 
@@ -81,6 +82,7 @@ Follow these steps to keep your branch in sync and land changes without surprise
 4. Add guardrails from `/advanced` (tool policies, budgets, fallbacks) before shipping.
 5. Run `/real-world/02-production-readiness` to pass launch gates and observability checks.
 6. Review the ethical checklist in `/philosophy` to keep outcomes responsible.
+7. Share ideas or issues via `/feedback.md` without leaving the premium experience.
 
 ## Depth-First Labs (No Fluff)
 
@@ -106,3 +108,9 @@ Bring the "premium product" promise to life with feature-grade additions:
 - **Content controls.** Add switches to show/hide inline rationales, reveal failure examples, or flip between "teaching" and "delivery" voices so the same content works for learning and approvals.
 - **Handoff pack generator.** One-click download of prompt templates, acceptance criteria, and QA checklists as PDF/Markdown bundles to send to clients or compliance reviewers.
 - **Evaluation cockpit.** Small dashboard that surfaces prompt versions, quality gates, and sample test cases to make the playbook feel operational rather than static documentation.
+
+## Feedback & Contact (No Repo Required)
+
+- Use the form on `/feedback.md` and swap the `action` attribute for your form backend (Formspree/Basin/Netlify Forms).
+- Route submissions into a sheet or CRM with automation so you can track owners and follow-up dates.
+- Keep fields minimal and add a short privacy note if you enable analytics.
